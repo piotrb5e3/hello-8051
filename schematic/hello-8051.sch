@@ -1,0 +1,233 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Hello 8051"
+Date "2017-12-28"
+Rev "0.1.0"
+Comp "Piotr Bakalarski <piotr@0bit.pw>"
+Comment1 "Distributed under the MIT license"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AT89C2051-PU U1
+U 1 1 5A450FAD
+P 5450 4000
+F 0 "U1" H 4500 5000 50  0000 C CNN
+F 1 "AT89C2051-PU" H 6200 3100 50  0000 C CNN
+F 2 "Housings_DIP:DIP-20_W7.62mm" H 5450 4000 50  0001 C CIN
+F 3 "" H 5450 4000 50  0001 C CNN
+	1    5450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR4
+U 1 1 5A45105C
+P 5450 2800
+F 0 "#PWR4" H 5450 2650 50  0001 C CNN
+F 1 "+5V" H 5450 2940 50  0000 C CNN
+F 2 "" H 5450 2800 50  0001 C CNN
+F 3 "" H 5450 2800 50  0001 C CNN
+	1    5450 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 5A451086
+P 5450 5100
+F 0 "#PWR5" H 5450 4850 50  0001 C CNN
+F 1 "GND" H 5450 4950 50  0000 C CNN
+F 2 "" H 5450 5100 50  0001 C CNN
+F 3 "" H 5450 5100 50  0001 C CNN
+	1    5450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2900 5450 2800
+Wire Wire Line
+	5450 5000 5450 5100
+$Comp
+L Crystal Y1
+U 1 1 5A4510C9
+P 4050 3650
+F 0 "Y1" H 4050 3800 50  0000 C CNN
+F 1 "16MHz" H 4050 3500 50  0000 C CNN
+F 2 "" H 4050 3650 50  0001 C CNN
+F 3 "" H 4050 3650 50  0001 C CNN
+	1    4050 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3500 4300 3500
+Wire Wire Line
+	3850 3800 4300 3800
+$Comp
+L C_Small C1
+U 1 1 5A45112D
+P 3750 3500
+F 0 "C1" H 3760 3570 50  0000 L CNN
+F 1 "30pF" H 3760 3420 50  0000 L CNN
+F 2 "" H 3750 3500 50  0001 C CNN
+F 3 "" H 3750 3500 50  0001 C CNN
+	1    3750 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5A451181
+P 3750 3800
+F 0 "C2" H 3760 3870 50  0000 L CNN
+F 1 "30pF" H 3760 3720 50  0000 L CNN
+F 2 "" H 3750 3800 50  0001 C CNN
+F 3 "" H 3750 3800 50  0001 C CNN
+	1    3750 3800
+	0    1    1    0   
+$EndComp
+Connection ~ 4050 3800
+Connection ~ 4050 3500
+$Comp
+L GND #PWR2
+U 1 1 5A4511D8
+P 3550 3800
+F 0 "#PWR2" H 3550 3550 50  0001 C CNN
+F 1 "GND" H 3550 3650 50  0000 C CNN
+F 2 "" H 3550 3800 50  0001 C CNN
+F 3 "" H 3550 3800 50  0001 C CNN
+	1    3550 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 5A451BA5
+P 4100 3000
+F 0 "C3" H 4110 3070 50  0000 L CNN
+F 1 "100nF" H 4110 2920 50  0000 L CNN
+F 2 "" H 4100 3000 50  0001 C CNN
+F 3 "" H 4100 3000 50  0001 C CNN
+	1    4100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR3
+U 1 1 5A451BF8
+P 4100 2800
+F 0 "#PWR3" H 4100 2650 50  0001 C CNN
+F 1 "+5V" H 4100 2940 50  0000 C CNN
+F 2 "" H 4100 2800 50  0001 C CNN
+F 3 "" H 4100 2800 50  0001 C CNN
+	1    4100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2800 4100 2900
+Wire Wire Line
+	4100 3100 4100 3200
+$Comp
+L +5V #PWR6
+U 1 1 5A451E21
+P 6950 2800
+F 0 "#PWR6" H 6950 2650 50  0001 C CNN
+F 1 "+5V" H 6950 2940 50  0000 C CNN
+F 2 "" H 6950 2800 50  0001 C CNN
+F 3 "" H 6950 2800 50  0001 C CNN
+	1    6950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R1
+U 1 1 5A451E47
+P 6950 3000
+F 0 "R1" H 6980 3020 50  0000 L CNN
+F 1 "1K" H 6980 2960 50  0000 L CNN
+F 2 "" H 6950 3000 50  0001 C CNN
+F 3 "" H 6950 3000 50  0001 C CNN
+	1    6950 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 5A451E77
+P 6950 3300
+F 0 "D1" H 6950 3400 50  0000 C CNN
+F 1 "GreenLED" H 6950 3200 50  0000 C CNN
+F 2 "" H 6950 3300 50  0001 C CNN
+F 3 "" H 6950 3300 50  0001 C CNN
+	1    6950 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 2800 6950 2900
+Wire Wire Line
+	6950 3150 6950 3100
+Wire Wire Line
+	6950 3450 6950 3500
+Wire Wire Line
+	6950 3500 6600 3500
+Wire Wire Line
+	4100 3200 4300 3200
+$Comp
+L GND #PWR1
+U 1 1 5A452760
+P 3550 3500
+F 0 "#PWR1" H 3550 3250 50  0001 C CNN
+F 1 "GND" H 3550 3350 50  0000 C CNN
+F 2 "" H 3550 3500 50  0001 C CNN
+F 3 "" H 3550 3500 50  0001 C CNN
+	1    3550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3500 3650 3500
+Wire Wire Line
+	3550 3800 3650 3800
+NoConn ~ 6600 3200
+NoConn ~ 6600 3300
+NoConn ~ 6600 3400
+NoConn ~ 6600 3600
+NoConn ~ 6600 3700
+NoConn ~ 6600 3800
+NoConn ~ 6600 3900
+NoConn ~ 6600 4700
+NoConn ~ 6600 4600
+NoConn ~ 6600 4500
+NoConn ~ 6600 4400
+NoConn ~ 6600 4300
+NoConn ~ 6600 4200
+NoConn ~ 6600 4100
+$EndSCHEMATC
